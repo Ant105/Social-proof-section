@@ -1,7 +1,9 @@
 .attribution {
-  font-size: 13px;
+  font-size: 1.6rem;
+  font-weight: 500;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -37,15 +39,23 @@ html {
 
 body {
   font-family: "League Spartan", "Arial Black", Verdana, Geneva, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
 }
 
-.wrapper {
+.social-proof {
   font-size: 1.6rem;
   width: 20.43em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4em auto 4em 1em;
+  margin: 4em 0;
 }
 
 .h1-wrapper {
@@ -53,7 +63,7 @@ body {
   margin: 0 auto 1em auto;
 }
 
-.header {
+.main-header {
   font-weight: 700;
   font-size: 2.5em;
   line-height: 0.85;
@@ -85,7 +95,7 @@ body {
 }
 
 /* last review-card */
-.part1-2:last-child {
+.review-card:nth-child(3) {
   margin-bottom: 2em;
 }
 
@@ -114,7 +124,7 @@ body {
   color: var(--purple-900);
 }
 
-.testimonials-card {
+.testimonial-card {
   width: 100%;
   height: 15.37em;
   padding: 2em;
@@ -126,26 +136,26 @@ body {
   margin-top: 1em;
 }
 
-.cantainer00 {
+.testimonial-card__header {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-.container478 {
+.testimonial-card__info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 1.5em;
 }
 
-.testimonials-card__image {
+.testimonial-card__image {
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
 }
 
-.testimonials-card__name {
+.testimonial-card__name {
   font-weight: 700;
   font-size: 1.06em;
   line-height: 1;
@@ -154,7 +164,7 @@ body {
   display: inline-block;
 }
 
-.testimonials-card__verified-buyer {
+.testimonial-card__verified-buyer {
   font-weight: 400;
   font-size: 1.06em;
   line-height: 1;
@@ -163,7 +173,7 @@ body {
   display: inline-block;
 }
 
-.testimonials-card__quote {
+.testimonial-card__quote {
   font-weight: 500;
   font-size: 1.06em;
   line-height: 1.3;
@@ -171,14 +181,9 @@ body {
   color: var(--white);
 }
 
-@media (min-width: 1em) {
-  .wrapper {
-    font-size: 1.6rem;
+@media (min-width: 1000em) {
+  .social-proof {
     width: 28.31em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 4em auto 4em 1em;
   }
 
   .h1-wrapper {
@@ -186,7 +191,7 @@ body {
     overflow: visible;
   }
 
-  .header {
+  .main-header {
     font-size: 3.5em;
     letter-spacing: -0.035em;
     margin: 0 -0.5em 0 -0.5em;
@@ -200,6 +205,110 @@ body {
   }
 
   .review-card__text {
-    background-color: rgb(0, 255, 242);
+    height: 0.7em;
+    margin-left: 1.8em;
+  }
+
+  .testimonial-card {
+    height: 14em;
+    padding: 2em 2.6em;
+  }
+
+  .testimonial-card:not(:first-of-type) {
+    padding: 2.68em 2.6em;
+  }
+}
+
+@media (min-width: 2000em) {
+  body {
+    background-image: url("./images/bg-pattern-top-desktop.svg"),
+      url("./images/bg-pattern-bottom-desktop.svg");
+  }
+
+  .social-proof {
+    width: 69.37em;
+    height: 35.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-header {
+    margin: 0;
+    text-align: start;
+  }
+
+  .description {
+    text-align: start;
+    margin-top: 1.4em;
+  }
+
+  .social-proof__text {
+    width: 27.8em;
+    height: 100%;
+  }
+
+  .social-proof__ratings {
+    width: 33.87em;
+    height: 11.18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .social-proof__intro {
+    width: 100%;
+    height: 15.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-proof__testimonials {
+    width: 100%;
+    height: 16em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review-card {
+    width: 27.87em;
+    margin: 0;
+  }
+
+  .review-card:nth-child(1) {
+    margin-right: auto;
+  }
+
+  .review-card:nth-child(2) {
+    margin: 0 auto 0 auto;
+  }
+
+  .review-card:nth-child(3) {
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .testimonial-card {
+    width: 21.87em;
+    /*change padding:  ; */
+    margin: 0;
+  }
+
+  .testimonial-card:nth-child(1) {
+    margin-bottom: auto;
+  }
+
+  .testimonial-card:nth-child(2) {
+    margin: auto 0 auto 0;
+  }
+
+  .testimonial-card:nth-child(3) {
+    margin-top: auto;
+  }
+
+  .testimonial-card:not(:first-of-type),
+  .testimonial-card:first-of-type {
+    padding: 2em;
   }
 }
