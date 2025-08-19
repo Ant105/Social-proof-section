@@ -47,6 +47,7 @@ body {
     url("./images/bg-pattern-bottom-mobile.svg");
   background-repeat: no-repeat;
   background-position: left top, right bottom;
+  min-height: 100vh; /* !!!!!для изоб на дестопе */
 }
 
 .social-proof {
@@ -58,12 +59,12 @@ body {
   margin: 4em 0;
 }
 
-.h1-wrapper {
+.social-proof__title-wrapper {
   max-width: 90%;
   margin: 0 auto 1em auto;
 }
 
-.main-header {
+.social-proof__title {
   font-weight: 700;
   font-size: 2.5em;
   line-height: 0.85;
@@ -72,7 +73,7 @@ body {
   color: var(--purple-900);
 }
 
-.description {
+.social-proof__description {
   font-weight: 500;
   font-size: 1.18em;
   line-height: 1.35;
@@ -186,12 +187,12 @@ body {
     width: 28.31em;
   }
 
-  .h1-wrapper {
+  .social-proof__title-wrapper {
     max-width: unset;
     overflow: visible;
   }
 
-  .main-header {
+  .social-proof__title {
     font-size: 3.5em;
     letter-spacing: -0.035em;
     margin: 0 -0.5em 0 -0.5em;
@@ -233,12 +234,12 @@ body {
     justify-content: space-between;
   }
 
-  .main-header {
+  .social-proof__title {
     margin: 0;
     text-align: start;
   }
 
-  .description {
+  .social-proof__description {
     text-align: start;
     margin-top: 1.4em;
   }
