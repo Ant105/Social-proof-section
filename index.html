@@ -33,40 +33,58 @@
           </header>
         </div>
 
-        <div class="social-proof__ratings">
-          <div class="review-card">
-            <div class="review-card__stars">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <p class="review-card__text">Rated 5 Stars in Reviews</p>
-          </div>
+        <section>
+          <h2 class="visually-hidden">Ratings</h2>
+          <ul class="social-proof__ratings">
+            <li class="rating-card">
+              <div class="rating-card__stars" aria-hidden="true">
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+              </div>
+              <p class="rating-card__text">Rated 5 Stars in Reviews</p>
+            </li>
 
-          <div class="review-card">
-            <div class="review-card__stars">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <p class="review-card__text">Rated 5 Stars in Report Guru</p>
-          </div>
+            <li class="rating-card">
+              <div class="rating-card__stars" aria-hidden="true">
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+              </div>
+              <p class="rating-card__text">Rated 5 Stars in Report Guru</p>
+            </li>
 
-          <div class="review-card">
-            <div class="review-card__stars">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <p class="review-card__text">Rated 5 Stars in BestTech</p>
-          </div>
-        </div>
+            <li class="rating-card">
+              <div class="rating-card__stars" aria-hidden="true">
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+                <span class="rating-card__star"></span>
+              </div>
+              <p class="rating-card__text">Rated 5 Stars in BestTech</p>
+            </li>
+          </ul>
+        </section>
       </div>
 
-      <div class="social-proof__testimonials">
-        <div class="testimonial-card">
+      <section class="social-proof__testimonials">
+        <h2 class="visually-hidden">Testimonials</h2>
+        <article class="testimonial-card">
           <div class="testimonial-card__header">
             <img
               class="testimonial-card__image"
               src="./images/image-colton.jpg"
               alt="Colton Smith"
+              width="40"
+              height="40"
             />
             <div class="testimonial-card__info">
-              <p class="testimonial-card__name">Colton Smith</p>
+              <h3 class="testimonial-card__name">Colton Smith</h3>
               <p class="testimonial-card__verified-buyer">Verified Buyer</p>
             </div>
           </div>
@@ -77,17 +95,19 @@
               received it in time. Excellent! ”
             </p>
           </blockquote>
-        </div>
+        </article>
 
-        <div class="testimonial-card">
+        <article class="testimonial-card">
           <div class="testimonial-card__header">
             <img
               class="testimonial-card__image"
               src="./images/image-irene.jpg"
               alt="Irene Roberts"
+              width="40"
+              height="40"
             />
             <div class="testimonial-card__info">
-              <p class="testimonial-card__name">Irene Roberts</p>
+              <h3 class="testimonial-card__name">Irene Roberts</h3>
               <p class="testimonial-card__verified-buyer">Verified Buyer</p>
             </div>
           </div>
@@ -98,17 +118,19 @@
               speed of delivery. ”
             </p>
           </blockquote>
-        </div>
+        </article>
 
-        <div class="testimonial-card">
+        <article class="testimonial-card">
           <div class="testimonial-card__header">
             <img
               class="testimonial-card__image"
               src="./images/image-anne.jpg"
               alt="Anne Wallace"
+              width="40"
+              height="40"
             />
             <div class="testimonial-card__info">
-              <p class="testimonial-card__name">Anne Wallace</p>
+              <h3 class="testimonial-card__name">Anne Wallace</h3>
               <p class="testimonial-card__verified-buyer">Verified Buyer</p>
             </div>
           </div>
@@ -119,14 +141,17 @@
               them to everyone! ”
             </p>
           </blockquote>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
 
     <footer class="attribution">
       <p>
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          class="attribution__anchor"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
           >Frontend Mentor</a
         >. Coded by Maria Tsy.
       </p>

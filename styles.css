@@ -1,12 +1,4 @@
-.attribution {
-  font-size: 1.6rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+/* Mobile first, BEM */
 
 :root {
   --white: hsl(0, 0%, 100%);
@@ -47,9 +39,11 @@ body {
     url("./images/bg-pattern-bottom-mobile.svg");
   background-repeat: no-repeat;
   background-position: left top, right bottom;
-  min-height: 100vh; /* !!!!!для изоб на дестопе */
+  min-height: 100vh;
 }
 
+/* You can change the size of the social proof section by adjusting the font-size, 
+and this shouldn't affect its appearance other than its size */
 .social-proof {
   font-size: 1.6rem;
   width: 20.43em;
@@ -59,11 +53,13 @@ body {
   margin: 4em 0;
 }
 
+/* wrapper for h1 */
 .social-proof__title-wrapper {
   max-width: 90%;
   margin: 0 auto 1em auto;
 }
 
+/* h1 */
 .social-proof__title {
   font-weight: 700;
   font-size: 2.5em;
@@ -83,7 +79,20 @@ body {
   margin-bottom: 1.8em;
 }
 
-.review-card {
+/* For <h2>s (section headings) I added them to improve semantics */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.rating-card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -95,12 +104,11 @@ body {
   margin-top: 1em;
 }
 
-/* last review-card */
-.review-card:nth-child(3) {
+.rating-card:nth-of-type(3) {
   margin-bottom: 2em;
 }
 
-.review-card__stars {
+.rating-card__stars {
   width: 7.18em;
   height: 1.06em;
   display: flex;
@@ -108,15 +116,15 @@ body {
   align-items: center;
 }
 
-.review-card__stars span {
+.rating-card__star {
   width: 1.06em;
   height: 1.06em;
   background-image: url(./images/icon-star.svg);
-  background-repeat: repeat-x;
-  background-size: 1.06em 1.06em;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.review-card__text {
+.rating-card__text {
   font-weight: 700;
   font-size: 1.06em;
   line-height: 1;
@@ -137,12 +145,14 @@ body {
   margin-top: 1em;
 }
 
+/* testimonial-card__header = wrapper for img, name and verified buyer */
 .testimonial-card__header {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
+/* testimonial-card__info = wrapper for name and verified buyer */
 .testimonial-card__info {
   display: flex;
   flex-direction: column;
@@ -182,7 +192,25 @@ body {
   color: var(--white);
 }
 
-@media (min-width: 1000em) {
+.attribution {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.attribution__anchor {
+  color: hsl(228, 45%, 44%);
+}
+
+/* For very small screens, by reducing the font-size I 
+made the entire social proof section smaller */
+@media (max-width: 21.8em) {
+  .social-proof {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 30em) {
   .social-proof {
     width: 28.31em;
   }
@@ -198,15 +226,18 @@ body {
     margin: 0 -0.5em 0 -0.5em;
   }
 
-  .review-card {
+  .social-proof__description {
+    margin-bottom: 2.2em;
+  }
+
+  .rating-card {
     flex-direction: row;
     justify-content: start;
     padding: 1em 2em;
     height: 3.06em;
   }
 
-  .review-card__text {
-    height: 0.7em;
+  .rating-card__text {
     margin-left: 1.8em;
   }
 
@@ -215,12 +246,13 @@ body {
     padding: 2em 2.6em;
   }
 
+  /* in tablet version, the second and third cards seem to have more padding */
   .testimonial-card:not(:first-of-type) {
     padding: 2.68em 2.6em;
   }
 }
 
-@media (min-width: 2000em) {
+@media (min-width: 71em) {
   body {
     background-image: url("./images/bg-pattern-top-desktop.svg"),
       url("./images/bg-pattern-bottom-desktop.svg");
@@ -244,6 +276,7 @@ body {
     margin-top: 1.4em;
   }
 
+  /* social-proof__text = container for h1 and description */
   .social-proof__text {
     width: 27.8em;
     height: 100%;
@@ -257,6 +290,7 @@ body {
     justify-content: space-between;
   }
 
+  /* social-proof__intro = container for h1, description and rating cards */
   .social-proof__intro {
     width: 100%;
     height: 15.5em;
@@ -272,42 +306,42 @@ body {
     justify-content: space-between;
   }
 
-  .review-card {
+  .rating-card {
     width: 27.87em;
     margin: 0;
   }
 
-  .review-card:nth-child(1) {
+  .rating-card:nth-of-type(1) {
     margin-right: auto;
   }
 
-  .review-card:nth-child(2) {
+  .rating-card:nth-of-type(2) {
     margin: 0 auto 0 auto;
   }
 
-  .review-card:nth-child(3) {
+  .rating-card:nth-of-type(3) {
     margin-left: auto;
     margin-bottom: 0;
   }
 
   .testimonial-card {
     width: 21.87em;
-    /*change padding:  ; */
     margin: 0;
   }
 
-  .testimonial-card:nth-child(1) {
+  .testimonial-card:nth-of-type(1) {
     margin-bottom: auto;
   }
 
-  .testimonial-card:nth-child(2) {
+  .testimonial-card:nth-of-type(2) {
     margin: auto 0 auto 0;
   }
 
-  .testimonial-card:nth-child(3) {
+  .testimonial-card:nth-of-type(3) {
     margin-top: auto;
   }
 
+  /* reverted tablet padding; added specific selectors to override */
   .testimonial-card:not(:first-of-type),
   .testimonial-card:first-of-type {
     padding: 2em;
