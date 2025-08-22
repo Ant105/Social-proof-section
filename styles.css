@@ -252,7 +252,7 @@ made the entire social proof section smaller */
   }
 }
 
-@media (min-width: 71em) {
+@media (min-width: 71.2em) {
   body {
     background-image: url("./images/bg-pattern-top-desktop.svg"),
       url("./images/bg-pattern-bottom-desktop.svg");
